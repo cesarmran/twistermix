@@ -1,5 +1,3 @@
-// ==================== TWISTERMIX ALGORITHM IMPLEMENTATION ====================
-
 // XOR byte a byte entre bloque y subclave
 function xorBlock(block, key) {
     let out = new Uint8Array(4);
@@ -191,7 +189,7 @@ function decryptMessage(ciphertext, key) {
     return new Uint8Array(plaintext);
 }
 
-// ==================== UI INTERACTION ====================
+// UI
 
 document.addEventListener('DOMContentLoaded', function() {
     const modeBtns = document.querySelectorAll('.mode-btn');
