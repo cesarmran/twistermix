@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwisterMix Encryption</title>
+    <link rel="stylesheet" href="twistermix.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="padlock.gif">
+            <h1>TwisterMix Encryption</h1>
+            <p class="subtitle">A symmetric encryption algorithm with confusion and diffusion</p>
+        </header>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="encrypt">Encryption Mode</button>
+            <button class="mode-btn" data-mode="decrypt">Decryption Mode</button>
+        </div>
+
+        <div id="encrypt-form" class="encrypt-form">
+            <div class="form-group">
+                <label for="plaintext">Text to encrypt (max 100 characters):</label>
+                <textarea id="plaintext" placeholder="Enter your text here..."></textarea>
+                <div class="char-counter"><span id="char-count">0</span>/100</div>
+            </div>
+
+            <div class="form-group">
+                <label for="encrypt-key">Key (any length):</label>
+                <input type="text" id="encrypt-key" placeholder="Enter your encryption key">
+            </div>
+
+            <button id="encrypt-btn" class="btn btn-block">Encrypt Text</button>
+        </div>
+
+        <div id="decrypt-form" class="decrypt-form" style="display: none;">
+            <div class="form-group">
+                <label for="ciphertext">Encrypted text (hexadecimal):</label>
+                <textarea id="ciphertext" placeholder="Enter hexadecimal ciphertext..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="decrypt-key">Key (any length):</label>
+                <input type="text" id="decrypt-key" placeholder="Enter your decryption key">
+            </div>
+
+            <button id="decrypt-btn" class="btn btn-block">Decrypt Text</button>
+        </div>
+
+        <div id="result-container" class="result-container">
+            <h3 class="result-title" id="result-title"></h3>
+            <div class="result-content" id="result-content"></div>
+            <button id="copy-btn" class="btn copy-btn">Copy to Clipboard</button>
+        </div>
+
+       
+    <footer>
+        <p>TwisterMix Encryption Algorithm - Adapted from C++ to JavaScript</p>
+    </footer>
+
+    <script src="twistermix.js"></script>
+</body>
+</html>
